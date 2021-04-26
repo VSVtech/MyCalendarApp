@@ -2,6 +2,7 @@ package com.example.mycalendarapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.applandeo.materialcalendarview.*
 import com.applandeo.materialcalendarview.builders.DatePickerBuilder
 import com.applandeo.materialcalendarview.listeners.OnSelectDateListener
@@ -14,9 +15,9 @@ class CreateActivity : AppCompatActivity(), OnSelectDateListener {
 
     private lateinit var binding: ActivityCreateBinding
 
-    var calendarSelector = 0
-    var startDay = Calendar.getInstance()
-    var finishDay = Calendar.getInstance()
+    private var calendarSelector = 0
+    private var startDay: Calendar = Calendar.getInstance()
+    private var finishDay: Calendar = Calendar.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,16 +61,18 @@ class CreateActivity : AppCompatActivity(), OnSelectDateListener {
             startDay.set(Calendar.MINUTE,binding.createStartTime.minute)
             finishDay.set(Calendar.HOUR,binding.createFinishTime.hour)
             finishDay.set(Calendar.MINUTE,binding.createFinishTime.minute)
-            EventsProvider.addEvent(
+            if (finishDay.after(startDay)) {
+                EventsProvider.addEvent(
                     Event(
                             EventsProvider.NextID,
                             Timestamp(startDay.timeInMillis),
                             Timestamp(finishDay.timeInMillis),
                             binding.createName.text.toString(),
                             binding.createDescription.text.toString()))
-            finish()
+                finish()
+            }
+            else Toast.makeText(this, resources.getText(R.string.create_date_error) , Toast.LENGTH_LONG).show()
         }
-
     }
 
     override fun onSelect(calendar: MutableList<Calendar>?) {

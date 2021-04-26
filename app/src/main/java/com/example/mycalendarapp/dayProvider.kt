@@ -72,8 +72,7 @@ object EventsProvider{
         NextID++
     }
 }
-class DayProvider(val dayStart:Timestamp) {
-    val dayFinish = Timestamp(dayStart.time+24*3600*1000)
+class DayProvider(dayStart:Timestamp) {
 
     private var dayHours = listOf(
         DayHour(Timestamp(dayStart.time + 0*3600*1000)),

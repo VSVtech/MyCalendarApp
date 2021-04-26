@@ -17,7 +17,7 @@ class DayHour(val hour: Timestamp){
 }
 
 
-class DayHoursAdapter(private val list: List<DayHour>, var onEventClickListener: OnEventClickListener)
+class DayHoursAdapter(private val list: List<DayHour>, private var onEventClickListener: OnEventClickListener)
     : RecyclerView.Adapter<DayHoursAdapter.DayHourHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
