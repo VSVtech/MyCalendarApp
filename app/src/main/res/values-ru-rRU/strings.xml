@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Календарь событий</string>
+    <string name="event_start_time_title">"Начало: "</string>
+    <string name="event_finish_time_title">"Окончание: "</string>
+    <string name="create_name">Введите название события</string>
+    <string name="create_description">Введите описание нового события</string>
+    <string name="create_title">Новая задача</string>
+    <string name="create_create">Создать</string>
+    <string name="material_calendar_monday">ПН</string>
+    <string name="material_calendar_tuesday">ВТ</string>
+    <string name="material_calendar_wednesday">СР</string>
+    <string name="material_calendar_thursday">ЧТ</string>
+    <string name="material_calendar_friday">ПТ</string>
+    <string name="material_calendar_saturday">СБ</string>
+    <string name="material_calendar_sunday">ВТ</string>
+    <string name="material_calendar_today_button">Сегодня</string>
+    <string name="material_calendar_positive_button">ОК</string>
+    <string name="material_calendar_negative_button">Отмена</string>
+    <string name="january">январь</string>
+    <string name="february">февраль</string>
+    <string name="march">март</string>
+    <string name="april">апрель</string>
+    <string name="mai">май</string>
+    <string name="june">июнь</string>
+    <string name="july">июль</string>
+    <string name="august">август</string>
+    <string name="september">сентябрь</string>
+    <string name="october">октябрь</string>
+    <string name="november">ноябрь</string>
+    <string name="december">декабрь</string>
+</resources>
